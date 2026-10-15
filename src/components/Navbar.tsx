@@ -8,15 +8,33 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-sky-100 bg-slate-50/95 backdrop-blur-md transition-all">
+    <header
+      className={`fixed top-0 z-40 w-full border-b border-sky-100 bg-slate-50/95 backdrop-blur-md transition-all duration-500 ${
+        isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+      }`}
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-8 px-6 lg:px-8">
         {/* Zone 1: Single text element wordmark */}
         <a
           href="#"
-          className="font-serif-luxury text-2xl font-semibold tracking-tight text-slate-900 transition-colors hover:text-amber-900 whitespace-nowrap shrink-0"
+          className="flex items-center gap-3 font-serif-luxury text-2xl font-semibold tracking-tight text-slate-900 transition-colors hover:text-amber-900 whitespace-nowrap shrink-0"
         >
+          <img
+            src="https://user19731.na.imgto.link/public/20261015/7223fcc934836a02f0dd22a4-photo-2026-10-15-21-30-07.avif"
+            alt="Logo"
+            className="h-12 w-12 object-contain"
+          />
           {AGENT_PROFILE.name}
         </a>
 
@@ -65,7 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           </a>
           <button
             onClick={onOpenConsultation}
-            className="rounded-none bg-slate-900 px-5 py-2.5 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-amber-900 whitespace-nowrap shrink-0 shadow-sm"
+            className="rounded-full bg-slate-900 px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-all hover:bg-amber-900 hover:shadow-lg whitespace-nowrap shrink-0"
           >
             Schedule Consultation
           </button>

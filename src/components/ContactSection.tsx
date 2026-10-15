@@ -116,7 +116,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           </div>
 
           {/* Right: Lead Capture Form */}
-          <div className="lg:col-span-7 border border-sky-900/80 bg-slate-900 p-8 sm:p-10 shadow-2xl">
+          <div className="lg:col-span-7 border border-sky-900/80 bg-slate-900 p-8 sm:p-10 shadow-2xl rounded-3xl">
             {formSubmitted ? (
               <div className="py-12 text-center space-y-4">
                 <CheckCircle className="h-14 w-14 text-amber-400 mx-auto stroke-1" />

@@ -93,7 +93,7 @@ export const MultilingualSection: React.FC<MultilingualSectionProps> = ({ onOpen
           {AGENT_PROFILE.languages.map((lang) => (
             <div
               key={lang.code}
-              className="border border-sky-200 bg-white p-8 flex flex-col justify-between space-y-6 shadow-xs hover:border-amber-700 transition-colors"
+              className="border border-sky-200 bg-white p-8 flex flex-col justify-between space-y-6 shadow-xs hover:border-amber-700 transition-colors rounded-3xl"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

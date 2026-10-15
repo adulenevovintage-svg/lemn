@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { AgentBio } from './components/AgentBio';
 import { FeaturedListings } from './components/FeaturedListings';
 import { NegotiationSection } from './components/NegotiationSection';
 import { MultilingualSection } from './components/MultilingualSection';
@@ -48,6 +49,8 @@ export default function App() {
           selectedLang={selectedLang}
           onSelectLang={setSelectedLang}
         />
+        
+        <AgentBio />
 
         {/* Curated Listings Section (Features Real MLS Listings from References) */}
         <FeaturedListings

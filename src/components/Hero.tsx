@@ -24,6 +24,8 @@ export const Hero: React.FC<HeroProps> = ({
           src={AGENT_PROFILE.heroImage}
           alt="Modern Pacific Northwest luxury residence overlooking Seattle"
           referrerPolicy="no-referrer"
+          loading="eager"
+          decoding="async"
           className="h-full w-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-sky-950/70" />
@@ -83,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 onClick={onOpenConsultation}
-                className="group flex items-center gap-2 bg-amber-800 text-white px-6 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all hover:bg-amber-900 hover:shadow-lg whitespace-nowrap"
+                className="group flex items-center gap-2 bg-amber-800 text-white px-8 py-4 text-xs font-semibold uppercase tracking-wider transition-all hover:bg-amber-900 hover:shadow-xl rounded-full whitespace-nowrap"
               >
                 <span>{content.consultationCta}</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -91,7 +93,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               <a
                 href="#listings"
-                className="border border-sky-800/80 bg-transparent px-6 py-3.5 text-xs font-medium uppercase tracking-wider text-sky-100 transition-colors hover:border-sky-500 hover:text-white whitespace-nowrap"
+                className="border border-sky-800/80 bg-transparent px-8 py-4 text-xs font-medium uppercase tracking-wider text-sky-100 transition-colors hover:border-sky-500 hover:text-white rounded-full whitespace-nowrap"
               >
                 Explore Active Listings
               </a>
@@ -116,17 +118,21 @@ export const Hero: React.FC<HeroProps> = ({
 
           {/* Right Column: Agent Portrait Frame & Fiduciary Card */}
           <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="relative w-full max-w-md border border-sky-900/80 bg-slate-900/90 p-6 shadow-2xl backdrop-blur-sm">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+            <div className="relative w-full max-w-md border border-sky-900/80 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-md rounded-3xl">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-900 rounded-2xl">
                 {!imgError ? (
                   <div className="relative h-full w-full">
                     <img
                       src={AGENT_PROFILE.agentPhoto}
                       alt="Lemn Tesfaye - Real Estate Broker"
                       referrerPolicy="no-referrer"
+                      loading="eager"
+                      decoding="async"
                       onError={() => setImgError(true)}
-                      className="h-full w-full object-cover object-top filter saturate-110 contrast-105"
+                      className="h-full w-full object-cover object-top filter saturate-125 contrast-110"
                     />
+                    {/* Warm brown luxury tint overlay */}
+                    <div className="absolute inset-0 bg-amber-950/20 mix-blend-color-burn pointer-events-none" />
                   </div>
                 ) : (
                   <div className="flex h-full w-full flex-col items-center justify-center bg-slate-900 p-6 text-center text-slate-400">

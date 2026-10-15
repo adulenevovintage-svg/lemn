@@ -35,7 +35,7 @@ export const NegotiationSection: React.FC<NegotiationSectionProps> = ({ onOpenCo
           {NEGOTIATION_PILLARS.map((pillar) => (
             <div
               key={pillar.number}
-              className="border border-sky-900/60 bg-slate-900/90 p-8 flex flex-col justify-between space-y-6 shadow-xl"
+              className="border border-sky-900/60 bg-slate-900/90 p-8 flex flex-col justify-between space-y-6 shadow-xl rounded-3xl"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

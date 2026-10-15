@@ -46,24 +46,39 @@ export interface Testimonial {
 }
 
 export const AGENT_PROFILE = {
-  name: 'Lemn Tesfaye',
+  name: 'Lemlem Tesfaye',
   title: 'Licensed Real Estate Broker & Fiduciary Negotiator',
   brokerage: 'Skyline Properties, Inc.',
   brokerageTag: "Washington's Premier Independent Real Estate Firm",
   licenseNumber: 'WA DOL #253313',
   mlsAffiliation: 'Northwest Multiple Listing Service (NWMLS)',
-  phone: '(206) 375-9349',
-  phoneRaw: '2063759349',
+  phone: '(206) 203-7052',
+  phoneRaw: '2062037052',
   email: 'lemn.tesfaye@skylineproperties.com',
   officeAddress: 'Puget Sound Regional Offices, Seattle & Bellevue, WA',
   agentPhoto: 'https://mobilerealtyapps-agent-photos.s3.amazonaws.com/homespotter/agent_photo_253313_orig_0215140218',
   heroImage: '/seattle_luxury_architectural_hero.jpg',
   stats: [
-    { label: 'Avg Buyer Concession Won', value: '4.2%', context: 'Below initial list pricing' },
-    { label: 'List-to-Sale Price Ratio', value: '98.8%', context: 'For seller-represented clients' },
-    { label: 'Multilingual Languages', value: '3+', context: 'English, Amharic & Tigrinya' },
-    { label: 'Average Days to Mutual', value: '18 Days', context: 'Fast, strategic closings' },
+    { label: 'Total Closed Sales', value: '37', context: 'Prior 5 years of transactions' },
+    { label: 'Total Transaction Value', value: '$27M+', context: 'Across residential & investment portfolios' },
+    { label: 'Avg. Sale Price', value: '$730.4K', context: 'Active market performance' },
+    { label: 'Years of Experience', value: '9', context: 'Seattle & Puget Sound region' },
   ],
+  transactionHistory: {
+    seller: {
+      deals: 12,
+      totalValue: 12714500,
+      avgPrice: 1059542,
+      priceRange: '$239K - $2.3M',
+    },
+    buyer: {
+      deals: 25,
+      totalValue: 14310350,
+      avgPrice: 572414,
+      priceRange: '$53K - $840K',
+    },
+  },
+  homeTypes: ['House', 'Townhouse', 'Condo', 'Lot/Land'],
   languages: [
     {
       code: 'en',
@@ -165,9 +180,9 @@ export const FEATURED_LISTINGS: Listing[] = [
     sqft: 1990,
     lotSize: '0.107 ac / 4,668 sqft',
     yearBuilt: 1926,
-    coverImage: '/modern_craftsman_duplex.jpg',
+    coverImage: 'https://user19731.na.imgto.link/public/20261015/bfe5948c198ac31fd790630d-4152-65th-fife-wa-98424.avif',
     galleryImages: [
-      '/modern_craftsman_duplex.jpg',
+      'https://user19731.na.imgto.link/public/20261015/bfe5948c198ac31fd790630d-4152-65th-fife-wa-98424.avif',
       '/seattle_luxury_architectural_hero.jpg',
     ],
     description:
@@ -212,8 +227,8 @@ export const FEATURED_LISTINGS: Listing[] = [
     sqft: 3120,
     lotSize: '0.22 ac',
     yearBuilt: 2019,
-    coverImage: '/src/assets/images/seattle_luxury_architectural_hero_1792085059254.jpg',
-    galleryImages: ['/src/assets/images/seattle_luxury_architectural_hero_1792085059254.jpg'],
+    coverImage: 'https://user19731.na.imgto.link/public/20261015/045b0066aaa26fe6efa7f7e1-1117-17th-st-sw-puyallup-wa-primaryphoto.avif',
+    galleryImages: ['https://user19731.na.imgto.link/public/20261015/045b0066aaa26fe6efa7f7e1-1117-17th-st-sw-puyallup-wa-primaryphoto.avif'],
     description:
       'Negotiated a $45,000 price discount alongside a $12,500 seller-paid temporary 2-1 interest rate buy-down, saving the buyers over $850/month in first-year payments.',
     highlights: [

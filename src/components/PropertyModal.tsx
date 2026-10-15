@@ -33,7 +33,7 @@ export const PropertyModal: React.FC<PropertyModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto bg-sky-50/5 border border-sky-200 bg-white shadow-2xl transition-all"
+        className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto bg-sky-50/5 border border-sky-200 bg-white shadow-2xl transition-all rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
@@ -74,6 +74,8 @@ export const PropertyModal: React.FC<PropertyModalProps> = ({
                 src={listing.galleryImages[activePhotoIdx] || listing.coverImage}
                 alt={`${listing.title} view ${activePhotoIdx + 1}`}
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
               <div className="absolute bottom-3 right-3 bg-slate-950/85 px-3 py-1 text-xs font-mono-num text-sky-100">

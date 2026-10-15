@@ -58,18 +58,20 @@ export const FeaturedListings: React.FC<FeaturedListingsProps> = ({
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="group flex flex-col justify-between border border-sky-200 bg-white transition-all hover:border-amber-700 hover:shadow-md"
+              className="group flex flex-col justify-between border border-sky-200 bg-white transition-all hover:border-amber-700 hover:shadow-lg rounded-3xl"
             >
               <div>
                 {/* Media frame with fallback */}
                 <div
-                  className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900 cursor-pointer"
+                  className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900 cursor-pointer rounded-t-3xl"
                   onClick={() => onSelectListing(item)}
                 >
                   <img
                     src={item.coverImage}
                     alt={item.title}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Subtle top indicator bar */}
