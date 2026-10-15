@@ -125,10 +125,8 @@ export const Hero: React.FC<HeroProps> = ({
                       alt="Lemn Tesfaye - Real Estate Broker"
                       referrerPolicy="no-referrer"
                       onError={() => setImgError(true)}
-                      className="h-full w-full object-cover object-top filter saturate-125 contrast-110"
+                      className="h-full w-full object-cover object-top filter saturate-110 contrast-105"
                     />
-                    {/* Warm brown luxury tint overlay */}
-                    <div className="absolute inset-0 bg-amber-950/20 mix-blend-color-burn pointer-events-none" />
                   </div>
                 ) : (
                   <div className="flex h-full w-full flex-col items-center justify-center bg-slate-900 p-6 text-center text-slate-400">

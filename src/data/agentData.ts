@@ -57,7 +57,7 @@ export const AGENT_PROFILE = {
   email: 'lemn.tesfaye@skylineproperties.com',
   officeAddress: 'Puget Sound Regional Offices, Seattle & Bellevue, WA',
   agentPhoto: 'https://mobilerealtyapps-agent-photos.s3.amazonaws.com/homespotter/agent_photo_253313_orig_0215140218',
-  heroImage: '/src/assets/images/seattle_luxury_architectural_hero_1792085059254.jpg',
+  heroImage: '/seattle_luxury_architectural_hero.jpg',
   stats: [
     { label: 'Avg Buyer Concession Won', value: '4.2%', context: 'Below initial list pricing' },
     { label: 'List-to-Sale Price Ratio', value: '98.8%', context: 'For seller-represented clients' },
@@ -165,10 +165,10 @@ export const FEATURED_LISTINGS: Listing[] = [
     sqft: 1990,
     lotSize: '0.107 ac / 4,668 sqft',
     yearBuilt: 1926,
-    coverImage: '/src/assets/images/modern_craftsman_duplex_1792085060071.jpg',
+    coverImage: '/modern_craftsman_duplex.jpg',
     galleryImages: [
-      '/src/assets/images/modern_craftsman_duplex_1792085060071.jpg',
-      '/src/assets/images/seattle_luxury_architectural_hero_1792085059254.jpg',
+      '/modern_craftsman_duplex.jpg',
+      '/seattle_luxury_architectural_hero.jpg',
     ],
     description:
       'Unlock the potential of this versatile Oak Tree duplex, ideally positioned near shopping, dining, entertainment, public transit, and major North Seattle commuter corridors. Featuring a flexible floor plan with a second kitchen, generous living spaces, and established rental history. The expansive, fully fenced corner yard provides tenant appeal and off-street parking. Ideal for portfolio expansion, house hacking, or value-add redevelopment in one of Seattle’s rapidly appreciating corridors.',
